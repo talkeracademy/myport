@@ -3,178 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamujon | Portfolio</title>
+    <title>Mamujon | Digital Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000;
-            color: #f5f5f7;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #060a07;
+            color: #e2e8f0;
             overflow-x: hidden;
         }
 
-        .mamujon-gradient {
-            background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .glass-nav {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
+        .text-glow {
+            text-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
         }
 
-        /* Smooth scrolling feel */
-        html.lenis { height: auto; }
-        .lenis-smooth { scroll-behavior: auto !important; }
+        .green-gradient {
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+        }
+
+        /* Floating Animation for UI cards */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
     </style>
 </head>
 <body>
 
-    <nav class="glass-nav fixed w-full z-50 top-0 border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter hover:opacity-70 transition cursor-pointer">MAMUJON.</span>
-            <div class="hidden md:flex space-x-10 text-xs font-medium tracking-widest text-gray-400 uppercase">
-                <a href="#main" class="hover:text-white transition">Intro</a>
-                <a href="#details" class="hover:text-white transition">About</a>
-                <a href="#gallery" class="hover:text-white transition">Gallery</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
+    <nav class="fixed w-full z-50 top-6 px-6">
+        <div class="max-w-5xl mx-auto glass rounded-full px-6 py-3 flex justify-between items-center">
+            <div class="font-bold tracking-tighter text-xl">MAMUJON<span class="text-emerald-500">.</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#main" class="hover:text-emerald-400 transition">Main</a>
+                <a href="#details" class="hover:text-emerald-400 transition">Strategy</a>
+                <a href="#gallery" class="hover:text-emerald-400 transition">Work</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
             </div>
+            <a href="#contact" class="green-gradient text-black text-xs font-bold px-5 py-2 rounded-full uppercase">Let's Talk</a>
         </div>
     </nav>
 
-    <section id="main" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
-        <div class="hero-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
-        
-        <div class="hero-content">
-            <h1 id="hero-name" class="text-7xl md:text-9xl font-black mamujon-gradient tracking-tighter mb-4 scale-110">
-                Mamujon.
-            </h1>
-            <p class="hero-sub text-xl md:text-3xl font-light text-gray-500 max-w-3xl mx-auto">
-                Crafting the future of digital elegance.
-            </p>
-        </div>
-        
-        <div class="absolute bottom-10 animate-bounce text-gray-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-        </div>
-    </section>
+    <section id="main" class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-600/20 rounded-full blur-[120px] -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-900/10 rounded-full blur-[120px] -z-10"></div>
 
-    <section id="details" class="py-40 px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Simplicity is the ultimate sophistication.</h2>
-                    <p class="text-gray-500 text-lg leading-relaxed mb-6">
-                        I specialize in creating clean, modern interfaces that prioritize the user's journey.
-                    </p>
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-left">
+                <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-6">
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                    <span class="text-emerald-500 text-xs font-bold uppercase tracking-widest">Available for Projects</span>
                 </div>
-                <div class="about-card scale-90 opacity-0 transform translate-y-10 transition-all duration-1000 bg-gradient-to-br from-zinc-800 to-zinc-950 p-1 rounded-3xl shadow-2xl">
-                    <div class="bg-black rounded-[22px] p-8 aspect-square flex flex-col justify-end">
-                        <span class="text-blue-500 font-mono text-sm mb-2">01. Strategy</span>
-                        <h3 class="text-2xl font-bold">Deep Research & Planning</h3>
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-[1.1] mb-6">
+                    Building <span class="text-emerald-400 text-glow">Digital</span> Future.
+                </h1>
+                <p class="text-gray-400 text-xl max-w-lg font-light leading-relaxed mb-10">
+                    Transforming complex ideas into seamless digital experiences through modern storytelling and precision code.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="green-gradient text-black font-bold px-8 py-4 rounded-xl hover:scale-105 transition">Explore Work</button>
+                    <button class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition">The Story</button>
+                </div>
+            </div>
+
+            <div class="relative hidden lg:block h-[500px]">
+                <div class="absolute top-0 right-0 w-64 glass p-6 rounded-2xl animate-float shadow-2xl">
+                    <div class="w-10 h-10 bg-emerald-500/20 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2"></path></svg>
+                    </div>
+                    <div class="h-2 w-20 bg-emerald-500/30 rounded-full mb-2"></div>
+                    <div class="h-2 w-12 bg-white/10 rounded-full"></div>
+                </div>
+                <div class="absolute bottom-10 left-10 w-72 glass p-6 rounded-2xl animate-float shadow-2xl" style="animation-delay: -2s;">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-gray-400 uppercase font-bold">Performance</span>
+                        <span class="text-emerald-400 font-bold">+99%</span>
+                    </div>
+                    <div class="flex space-x-1 items-end h-12">
+                        <div class="w-full bg-emerald-500/40 h-1/2 rounded-t-sm"></div>
+                        <div class="w-full bg-emerald-500/40 h-3/4 rounded-t-sm"></div>
+                        <div class="w-full bg-emerald-500 h-full rounded-t-sm"></div>
+                        <div class="w-full bg-emerald-500/60 h-2/3 rounded-t-sm"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-32 px-6 bg-zinc-950">
+    <section id="details" class="py-32 px-6 relative">
+        <div class="max-w-5xl mx-auto text-center mb-20">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6">A New Way to <span class="text-emerald-500">Design.</span></h2>
+            <p class="text-gray-500 text-lg max-w-2xl mx-auto">Every project is a chapter. I don't just build sites; I build a narrative that connects your brand to your audience.</p>
+        </div>
+        
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+            <div class="glass p-8 rounded-3xl group hover:border-emerald-500/50 transition-all duration-500">
+                <div class="text-emerald-500 text-4xl font-bold mb-4 opacity-20">01</div>
+                <h3 class="text-xl font-bold mb-4">Mastery</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Deep focus on user psychology to drive engagement and retention.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl bg-emerald-500/5 border-emerald-500/20">
+                <div class="text-emerald-500 text-4xl font-bold mb-4 opacity-20">02</div>
+                <h3 class="text-xl font-bold mb-4">Education</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Simplifying complex data into visual stories that anyone can understand.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl group hover:border-emerald-500/50 transition-all duration-500">
+                <div class="text-emerald-500 text-4xl font-bold mb-4 opacity-20">03</div>
+                <h3 class="text-xl font-bold mb-4">Scale</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Built with performance-first architecture to grow as you do.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-32 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-5xl font-bold mb-16 text-center">Selected Projects.</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="gallery-item group relative aspect-video overflow-hidden rounded-3xl bg-zinc-900 border border-white/5">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-5xl font-extrabold">The <span class="text-emerald-500">Archive.</span></h2>
+                <p class="text-gray-500 text-sm hidden md:block uppercase tracking-widest">Scroll to explore</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="gallery-card relative aspect-video rounded-[40px] overflow-hidden glass group cursor-pointer">
+                    <div class="absolute inset-0 green-gradient opacity-0 group-hover:opacity-10 transition-opacity"></div>
                     <div class="absolute bottom-10 left-10">
-                        <p class="text-blue-400 font-semibold text-sm mb-1 uppercase tracking-widest">Mobile Design</p>
-                        <h3 class="text-3xl font-bold">Project Horizon</h3>
+                        <h3 class="text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition">Crypto Central</h3>
+                        <p class="text-emerald-500 text-sm opacity-0 group-hover:opacity-100 transition">Case Study &rarr;</p>
                     </div>
                 </div>
-                <div class="gallery-item group relative aspect-video overflow-hidden rounded-3xl bg-zinc-800 border border-white/5">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                <div class="gallery-card relative aspect-video rounded-[40px] overflow-hidden glass group cursor-pointer">
+                    <div class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity"></div>
                     <div class="absolute bottom-10 left-10">
-                        <p class="text-purple-400 font-semibold text-sm mb-1 uppercase tracking-widest">Brand Identity</p>
-                        <h3 class="text-3xl font-bold">Lumina Studio</h3>
+                        <h3 class="text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition">Next Gen UI</h3>
+                        <p class="text-emerald-500 text-sm opacity-0 group-hover:opacity-100 transition">Case Study &rarr;</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-40 px-6 text-center">
-        <h2 class="contact-title text-6xl md:text-8xl font-black mb-12 tracking-tighter">Get in touch.</h2>
-        <a href="mailto:hello@mamujon.com" class="text-2xl md:text-4xl text-blue-500 font-light hover:underline underline-offset-8">
-            hello@mamujon.com
-        </a>
+    <section id="contact" class="py-40 px-6">
+        <div class="max-w-4xl mx-auto glass p-12 md:p-24 rounded-[60px] text-center relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 green-gradient"></div>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">Let’s Start <br> Your <span class="text-emerald-500">Next Chapter.</span></h2>
+            <a href="mailto:hello@mamujon.com" class="text-2xl md:text-3xl font-light hover:text-emerald-400 transition underline underline-offset-8 decoration-emerald-500/30">hello@mamujon.com</a>
+        </div>
     </section>
-
-    <footer class="py-10 text-center border-t border-white/5 text-gray-600 text-[10px] tracking-[0.2em] uppercase">
-        &copy; 2025 Mamujon Design.
-    </footer>
 
     <script>
-        // 1. Initialize Smooth Scroll (Lenis)
+        // Smooth Scroll
         const lenis = new Lenis();
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
 
-        // 2. Initialize AOS
-        AOS.init({ duration: 1000, once: false });
-
-        // 3. GSAP Scroll Animations
         gsap.registerPlugin(ScrollTrigger);
 
-        // Hero Name Parallax (Scales down and fades out as you scroll)
-        gsap.to("#hero-name", {
-            scrollTrigger: {
-                trigger: "#main",
-                start: "top top",
-                end: "bottom top",
-                scrub: true
-            },
-            scale: 0.8,
-            opacity: 0,
-            y: -50
-        });
-
-        // About Card Reveal
-        gsap.to(".about-card", {
-            scrollTrigger: {
-                trigger: "#details",
-                start: "top 80%",
-                toggleActions: "play none none reverse"
-            },
-            scale: 1,
-            opacity: 1,
-            y: 0,
-            duration: 1.5,
-            ease: "power4.out"
-        });
-
-        // Gallery Items Scroll Entrance
-        gsap.utils.toArray(".gallery-item").forEach(item => {
-            gsap.from(item, {
+        // Narrative Scroll Animations
+        gsap.utils.toArray(".gallery-card").forEach(card => {
+            gsap.from(card, {
                 scrollTrigger: {
-                    trigger: item,
-                    start: "top 90%",
-                    end: "top 50%",
+                    trigger: card,
+                    start: "top bottom",
+                    end: "top 60%",
                     scrub: 1
                 },
+                y: 100,
                 scale: 0.9,
-                opacity: 0.5,
-                duration: 1
+                opacity: 0
             });
+        });
+
+        // Background Glow Following Scroll
+        gsap.to(".hero-glow", {
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 2
+            },
+            y: 1000,
+            opacity: 0.5
         });
     </script>
 </body>
