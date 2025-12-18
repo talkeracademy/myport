@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamujon | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #f5f5f7;
+            overflow-x: hidden;
+        }
+
+        /* The "Apple" Text Gradient */
+        .mamujon-gradient {
+            background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Navigation */
+        .glass-nav {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav fixed w-full z-50 top-0 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter hover:opacity-70 transition cursor-pointer">MAMUJON.</span>
+            <div class="hidden md:flex space-x-10 text-xs font-medium tracking-widest text-gray-400 uppercase">
+                <a href="#main" class="hover:text-white transition">Intro</a>
+                <a href="#details" class="hover:text-white transition">About</a>
+                <a href="#gallery" class="hover:text-white transition">Gallery</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="main" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <div class="absolute inset-0 overflow-hidden -z-10">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]"></div>
+        </div>
+        
+        <h1 data-aos="fade-down" class="text-7xl md:text-9xl font-black mamujon-gradient tracking-tighter mb-4">
+            Mamujon.
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-3xl font-light text-gray-400 max-w-3xl">
+            Crafting the future of digital elegance.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="400" class="mt-12">
+            <a href="#gallery" class="bg-white text-black px-10 py-4 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300 inline-block">View My Work</a>
+        </div>
+    </section>
+
+    <section id="details" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Simplicity is the ultimate sophistication.</h2>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-6">
+                        I specialize in creating clean, modern interfaces that prioritize the user's journey. Like every great design, I believe less is always more.
+                    </p>
+                </div>
+                <div data-aos="fade-left" class="bg-gradient-to-br from-zinc-800 to-zinc-950 p-1 rounded-3xl shadow-2xl">
+                    <div class="bg-black rounded-[22px] p-8 aspect-square flex flex-col justify-end">
+                        <span class="text-blue-500 font-mono text-sm mb-2">01. Strategy</span>
+                        <h3 class="text-2xl font-bold">Deep Research & Planning</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-32 px-6 bg-zinc-950">
+        <div class="max-w-6xl mx-auto">
+            <h2 data-aos="fade-up" class="text-5xl font-bold mb-16 text-center">Selected Projects.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div data-aos="zoom-in" class="group relative aspect-video overflow-hidden rounded-3xl bg-zinc-900 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <div class="absolute bottom-10 left-10 translate-y-4 group-hover:translate-y-0 transition duration-500">
+                        <p class="text-blue-400 font-semibold text-sm mb-1 uppercase tracking-widest">Mobile Design</p>
+                        <h3 class="text-3xl font-bold">Project Horizon</h3>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="group relative aspect-video overflow-hidden rounded-3xl bg-zinc-800 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <div class="absolute bottom-10 left-10 translate-y-4 group-hover:translate-y-0 transition duration-500">
+                        <p class="text-purple-400 font-semibold text-sm mb-1 uppercase tracking-widest">Brand Identity</p>
+                        <h3 class="text-3xl font-bold">Lumina Studio</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-5xl md:text-8xl font-black mb-12 tracking-tighter">Get in touch.</h2>
+            <a href="mailto:hello@mamujon.com" class="text-2xl md:text-4xl text-blue-500 font-light hover:opacity-70 transition">
+                hello@mamujon.com
+            </a>
+            <div class="mt-20 flex justify-center space-x-8 text-gray-500 text-sm font-medium">
+                <a href="#" class="hover:text-white transition">Instagram</a>
+                <a href="#" class="hover:text-white transition">LinkedIn</a>
+                <a href="#" class="hover:text-white transition">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-white/5 text-gray-600 text-[10px] tracking-[0.2em] uppercase">
+        &copy; 2024 Mamujon Design. All rights reserved.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true
+        });
+    </script>
+</body>
+</html>
