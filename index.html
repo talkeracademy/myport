@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamujon | Digital Architect</title>
+    <title>Mamujon | Educational Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -24,128 +24,131 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .text-glow {
-            text-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+        .green-glow {
+            text-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
         }
 
         .green-gradient {
             background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
         }
 
-        /* Floating Animation for UI cards */
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
-        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float { animation: float 5s ease-in-out infinite; }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 top-6 px-6">
         <div class="max-w-5xl mx-auto glass rounded-full px-6 py-3 flex justify-between items-center">
-            <div class="font-bold tracking-tighter text-xl">MAMUJON<span class="text-emerald-500">.</span></div>
+            <div class="font-bold tracking-tighter text-xl uppercase">Academy<span class="text-emerald-500">.</span></div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
-                <a href="#main" class="hover:text-emerald-400 transition">Main</a>
+                <a href="#main" class="hover:text-emerald-400 transition">Mission</a>
                 <a href="#details" class="hover:text-emerald-400 transition">Strategy</a>
-                <a href="#gallery" class="hover:text-emerald-400 transition">Work</a>
-                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+                <a href="#gallery" class="hover:text-emerald-400 transition">Life</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Enroll</a>
             </div>
-            <a href="#contact" class="green-gradient text-black text-xs font-bold px-5 py-2 rounded-full uppercase">Let's Talk</a>
+            <a href="#contact" class="green-gradient text-black text-xs font-bold px-5 py-2 rounded-full uppercase tracking-tighter">Get Started</a>
         </div>
     </nav>
 
     <section id="main" class="relative min-h-screen flex items-center justify-center px-6 pt-20">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-600/20 rounded-full blur-[120px] -z-10"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-900/10 rounded-full blur-[120px] -z-10"></div>
-
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px] -z-10"></div>
+        
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div class="text-left">
-                <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-6">
-                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                    <span class="text-emerald-500 text-xs font-bold uppercase tracking-widest">Available for Projects</span>
+                <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1 mb-6">
+                    <span class="text-emerald-500 text-xs font-bold uppercase tracking-widest">2025 Academic Season</span>
                 </div>
-                <h1 class="text-6xl md:text-8xl font-extrabold leading-[1.1] mb-6">
-                    Building <span class="text-emerald-400 text-glow">Digital</span> Future.
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-[1.1] mb-6 tracking-tight">
+                    Master the <br><span class="text-emerald-400 green-glow">Digital Campus.</span>
                 </h1>
                 <p class="text-gray-400 text-xl max-w-lg font-light leading-relaxed mb-10">
-                    Transforming complex ideas into seamless digital experiences through modern storytelling and precision code.
+                    Comprehensive education tailored for the next generation of leaders. We believe that school is the key to mastery.
                 </p>
                 <div class="flex space-x-4">
-                    <button class="green-gradient text-black font-bold px-8 py-4 rounded-xl hover:scale-105 transition">Explore Work</button>
-                    <button class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition">The Story</button>
+                    <a href="#gallery" class="green-gradient text-black font-bold px-8 py-4 rounded-xl hover:scale-105 transition shadow-[0_0_20px_rgba(16,185,129,0.3)]">View Gallery</a>
+                    <a href="#details" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition">Curriculum</a>
                 </div>
             </div>
 
             <div class="relative hidden lg:block h-[500px]">
                 <div class="absolute top-0 right-0 w-64 glass p-6 rounded-2xl animate-float shadow-2xl">
-                    <div class="w-10 h-10 bg-emerald-500/20 rounded-lg mb-4 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2"></path></svg>
+                    <span class="text-[10px] text-emerald-400 font-bold uppercase">Success Rate</span>
+                    <div class="text-4xl font-extrabold mt-2 tracking-tighter">98.4%</div>
+                    <div class="w-full bg-white/10 h-1 mt-4 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full w-[98%]"></div>
                     </div>
-                    <div class="h-2 w-20 bg-emerald-500/30 rounded-full mb-2"></div>
-                    <div class="h-2 w-12 bg-white/10 rounded-full"></div>
                 </div>
-                <div class="absolute bottom-10 left-10 w-72 glass p-6 rounded-2xl animate-float shadow-2xl" style="animation-delay: -2s;">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs text-gray-400 uppercase font-bold">Performance</span>
-                        <span class="text-emerald-400 font-bold">+99%</span>
+                <div class="absolute bottom-10 left-10 w-72 glass p-6 rounded-2xl animate-float shadow-2xl" style="animation-delay: -2.5s;">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                        </div>
+                        <span class="font-bold text-sm">Certified Learning</span>
                     </div>
-                    <div class="flex space-x-1 items-end h-12">
-                        <div class="w-full bg-emerald-500/40 h-1/2 rounded-t-sm"></div>
-                        <div class="w-full bg-emerald-500/40 h-3/4 rounded-t-sm"></div>
-                        <div class="w-full bg-emerald-500 h-full rounded-t-sm"></div>
-                        <div class="w-full bg-emerald-500/60 h-2/3 rounded-t-sm"></div>
-                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed">Education is the most powerful weapon which you can use to change the world.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="details" class="py-32 px-6 relative">
-        <div class="max-w-5xl mx-auto text-center mb-20">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-6">A New Way to <span class="text-emerald-500">Design.</span></h2>
-            <p class="text-gray-500 text-lg max-w-2xl mx-auto">Every project is a chapter. I don't just build sites; I build a narrative that connects your brand to your audience.</p>
+    <section id="details" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center mb-24">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-8 tracking-tighter">The <span class="text-emerald-500">Mastery</span> Path.</h2>
+            <p class="text-gray-400 text-lg leading-relaxed">We don't just teach; we ignite the spark of curiosity and guide students toward their ultimate potential.</p>
         </div>
         
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-            <div class="glass p-8 rounded-3xl group hover:border-emerald-500/50 transition-all duration-500">
-                <div class="text-emerald-500 text-4xl font-bold mb-4 opacity-20">01</div>
-                <h3 class="text-xl font-bold mb-4">Mastery</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Deep focus on user psychology to drive engagement and retention.</p>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="glass p-10 rounded-[40px] hover:border-emerald-500/50 transition duration-500">
+                <h3 class="text-2xl font-bold mb-4">Foundation</h3>
+                <p class="text-gray-500 text-sm">The first step to mastery is a solid grounding in the core principles of digital logic.</p>
             </div>
-            <div class="glass p-8 rounded-3xl bg-emerald-500/5 border-emerald-500/20">
-                <div class="text-emerald-500 text-4xl font-bold mb-4 opacity-20">02</div>
-                <h3 class="text-xl font-bold mb-4">Education</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Simplifying complex data into visual stories that anyone can understand.</p>
+            <div class="glass p-10 rounded-[40px] bg-emerald-500/5 border-emerald-500/20">
+                <h3 class="text-2xl font-bold mb-4">Innovation</h3>
+                <p class="text-gray-500 text-sm">Mastering the tools of tomorrow, today. We focus on hands-on creation and real-world problem solving.</p>
             </div>
-            <div class="glass p-8 rounded-3xl group hover:border-emerald-500/50 transition-all duration-500">
-                <div class="text-emerald-500 text-4xl font-bold mb-4 opacity-20">03</div>
-                <h3 class="text-xl font-bold mb-4">Scale</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Built with performance-first architecture to grow as you do.</p>
+            <div class="glass p-10 rounded-[40px] hover:border-emerald-500/50 transition duration-500">
+                <h3 class="text-2xl font-bold mb-4">Leadership</h3>
+                <p class="text-gray-500 text-sm">Finalizing the narrative by turning knowledge into action and leading teams to success.</p>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-32 px-6">
+    <section id="gallery" class="py-32 px-6 bg-[#040705]">
         <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="text-5xl font-extrabold">The <span class="text-emerald-500">Archive.</span></h2>
-                <p class="text-gray-500 text-sm hidden md:block uppercase tracking-widest">Scroll to explore</p>
-            </div>
+            <h2 class="text-5xl font-extrabold mb-16 text-center tracking-tighter">Visual <span class="text-emerald-500">Journeys.</span></h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="gallery-card relative aspect-video rounded-[40px] overflow-hidden glass group cursor-pointer">
-                    <div class="absolute inset-0 green-gradient opacity-0 group-hover:opacity-10 transition-opacity"></div>
-                    <div class="absolute bottom-10 left-10">
-                        <h3 class="text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition">Crypto Central</h3>
-                        <p class="text-emerald-500 text-sm opacity-0 group-hover:opacity-100 transition">Case Study &rarr;</p>
+                <div class="gallery-item group relative aspect-[4/3] rounded-[40px] overflow-hidden glass">
+                    <img src="img1.jpeg" alt="School Camp" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
+                    <div class="absolute bottom-8 left-8">
+                        <span class="text-xs text-emerald-400 font-bold uppercase tracking-widest">Outdoor Education</span>
+                        <h3 class="text-2xl font-bold">Winter Camp 2024</h3>
                     </div>
                 </div>
-                <div class="gallery-card relative aspect-video rounded-[40px] overflow-hidden glass group cursor-pointer">
-                    <div class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity"></div>
-                    <div class="absolute bottom-10 left-10">
-                        <h3 class="text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition">Next Gen UI</h3>
-                        <p class="text-emerald-500 text-sm opacity-0 group-hover:opacity-100 transition">Case Study &rarr;</p>
+                <div class="gallery-item group relative aspect-[4/3] rounded-[40px] overflow-hidden glass">
+                    <img src="img2.jpeg" alt="School Group" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
+                    <div class="absolute bottom-8 left-8">
+                        <span class="text-xs text-emerald-400 font-bold uppercase tracking-widest">Community</span>
+                        <h3 class="text-2xl font-bold">Academic Assembly</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group relative aspect-[4/3] rounded-[40px] overflow-hidden glass">
+                    <img src="img3.jpeg" alt="Skiing Group" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
+                    <div class="absolute bottom-8 left-8">
+                        <span class="text-xs text-emerald-400 font-bold uppercase tracking-widest">Adventure</span>
+                        <h3 class="text-2xl font-bold">Slope Mastery</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group relative aspect-[4/3] rounded-[40px] overflow-hidden glass">
+                    <img src="img4.jpeg" alt="Les Elfes" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
+                    <div class="absolute bottom-8 left-8">
+                        <span class="text-xs text-emerald-400 font-bold uppercase tracking-widest">Events</span>
+                        <h3 class="text-2xl font-bold">Les Elfes Retreat</h3>
                     </div>
                 </div>
             </div>
@@ -155,44 +158,33 @@
     <section id="contact" class="py-40 px-6">
         <div class="max-w-4xl mx-auto glass p-12 md:p-24 rounded-[60px] text-center relative overflow-hidden">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 green-gradient"></div>
-            <h2 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">Let’s Start <br> Your <span class="text-emerald-500">Next Chapter.</span></h2>
-            <a href="mailto:hello@mamujon.com" class="text-2xl md:text-3xl font-light hover:text-emerald-400 transition underline underline-offset-8 decoration-emerald-500/30">hello@mamujon.com</a>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">Ready to <span class="text-emerald-500">Learn?</span></h2>
+            <p class="text-gray-400 mb-12">Start your narrative today. Join our elite educational community.</p>
+            <a href="mailto:hello@academy.com" class="text-2xl md:text-4xl font-light hover:text-emerald-400 transition underline underline-offset-8 decoration-emerald-500/30">hello@academy.com</a>
         </div>
     </section>
 
     <script>
-        // Smooth Scroll
+        // Smooth Scroll Initialization
         const lenis = new Lenis();
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
 
         gsap.registerPlugin(ScrollTrigger);
 
-        // Narrative Scroll Animations
-        gsap.utils.toArray(".gallery-card").forEach(card => {
-            gsap.from(card, {
+        // Storytelling: Rising Items on Scroll
+        gsap.utils.toArray(".gallery-item").forEach(item => {
+            gsap.from(item, {
                 scrollTrigger: {
-                    trigger: card,
+                    trigger: item,
                     start: "top bottom",
-                    end: "top 60%",
+                    end: "top 70%",
                     scrub: 1
                 },
-                y: 100,
-                scale: 0.9,
-                opacity: 0
+                y: 80,
+                opacity: 0,
+                scale: 0.95
             });
-        });
-
-        // Background Glow Following Scroll
-        gsap.to(".hero-glow", {
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 2
-            },
-            y: 1000,
-            opacity: 0.5
         });
     </script>
 </body>
